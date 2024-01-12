@@ -1,0 +1,315 @@
+.banner{
+    height: 100%;
+    weight: 100%;
+}
+
+.holder{
+    display: flex;
+}
+
+.findbyfields{
+    text-align: center;
+    height: 95vh;
+    width: 200px;
+    margin: 20px  20px;
+    padding: 10px;
+    background: white;
+
+    
+}
+
+.fields{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+
+}
+
+.field{
+    width: 100px;
+    height: 120px;
+    background: #ffd5f4;
+    margin: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.field:hover{
+    opacity: 1;
+}
+
+.filter{
+    width: 790px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background: #ffffff;
+}
+
+.locationandfilter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: #ff55dc;
+}
+
+.locationandfilter div{
+    margin: 0 30px;
+}
+
+.searchbtn{
+    width: 90px;
+    height: 30px;
+    
+}
+
+.results{
+    width: 790px;
+    height: 90vh;
+    margin: 20px 0 0 0;
+    background: rgb(255,255,255,0.5);
+    border: 2px solid #000000;
+}
+
+.resultlisttab{
+    width: 100%;
+    background: rgb(255,255,255,0.5);
+
+}
+
+.workertab{
+    width:90%;
+    height: 400px;
+    margin: 10px;
+    background: rgb(255,255,255,0.5);
+    
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    
+}
+
+.workertab{
+    display: flex;
+    border: 2px solid #000000;
+    
+    
+}
+
+.resultsinfo img{
+    width: 150px;
+    height: 150px;
+}
+
+.resultsinfo{
+    width: 70%;
+    display: flex;
+    flex-grow: 2;
+    align-items: center;
+}
+
+.pic{
+    margin: 10px;
+}
+
+
+.resultspics{
+    width: 40%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #c5009a;
+}
+
+
+.about p{
+    margin: 10px;
+}
+
+.smallimg{
+    float: left;
+    margin: 2px;
+}
+
+.smallimg img{
+    height: 65px;
+    width: 92px;
+    margin: 2px 0;
+    cursor: pointer;
+    opacity: 0.6;
+    
+}
+
+.smallimg img:hover{
+    opacity: 1;
+}
+.about{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+
+.fullimg img{
+    height: 350px;
+    width: 190px;
+    margin: 5px;
+}
+
+.fullimg{
+    float: rigth;
+}
+
+
+#masonbtn{
+    background-image: url(images/mason.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#carpenterbtn{
+    background-image: url(images/carpenter.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#electricianbtn{
+    background-image: url(images/electrician.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#plumberbtn{
+    background-image: url(images/plumber.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#glazierbtn{
+    background-image: url(images/glazier.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#tilerbtn{
+    background-image: url(images/tiler.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#civilbtn{
+    background-image: url(images/civil.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#painterbtn{
+    background-image: url(images/painter.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#welderbtn{
+    background-image: url(images/welder.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#gardenerbtn{
+    background-image: url(images/gardener.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+@media(max-width: 700px){
+    .holder{
+	display: block;
+    }
+
+    .fields{
+	height: 100%;
+	width: 100%;
+	flex-direction: row;
+	
+    }
+    .findbyfields{
+	width: 90%;
+	height: 100%;
+	margin: 10px;
+    }
+
+    .locationandfilter{
+	width: 100%;
+    }
+
+    .filter{
+	width: 95%;
+	margin: 10px;
+	
+
+    }
+
+    .results{
+	width: 100%;
+	margin: 7px;
+    }
+
+    .locationandfilter{
+	flex-direction: column;
+	width: 80%;
+    }
+
+    .resultsinfo img{
+	width: 50px;
+	height: 60px;
+    }
+
+    .resultsinfo {
+	display: block;
+	height: 100%;
+	overflow: auto;
+    }
+
+    .resultspics{
+	display: block;
+	
+    }
+
+    .smallimg{
+	margin: 5px;
+	display: flex;
+	flex-wrap:  wrap;
+    }
+
+    .smallimg img{
+	margin: 3px;
+	width: 30px;
+	height: 50px;
+    }
+	
+
+    .fullimg img{
+	height: 220px;
+	width: 120px;
+	margin: 5px;
+    }
+
+    .banner{
+	width: 100%;
+	
+}

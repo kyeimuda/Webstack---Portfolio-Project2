@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    background-image: url(images/civil.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.actualContent{
+    width: 100%;
+    height: 100%;
+    display: block;;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+    
+    
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-links ul li{
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #15f5ff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.close{
+    width: 20px;
+    display: none;
+}
+
+.menu{
+    width: 30px;
+    display: none;
+}
+
+.flash{
+    color: #fff;
+}
+
+@media(max-width: 700px){
+    .nav-links ul li{
+	display:block;
+
+    }
+    
+    .nav-links{
+	position: absolute;
+	background: #ff352b;
+	height: 100vh;
+	width: 200px;
+	display: none;
+	top: 0;
+	text-align: left;
+	z-index: 2;
+
+    }
+    
+    .close{
+	width: 20px;
+	display: block;
+	margin: 10px;
+	font-size: 22px;
+	cursor: pointer;
+    }
+    
+    .menu{
+	width: 30px;
+	display: block;
+	margin: 10px;
+	font-size: 22px;
+	cursor: pointer;
+	background-color: #ffffff;
+    }
+    
+    .nav-links ul{
+	padding: 10px;
+	
+    }
+}

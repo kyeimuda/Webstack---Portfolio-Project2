@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Workerfy home page{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="homecontent">
+  <div class="intromsg">
+    <h1 class="slide-left"> Workerfy </h1>
+    <p class="slide-left">Looking for someone to do your civil works and repairs</p>
+    <p class="slide-left">
+      But time and duties have become constrains, 
+      </p>
+    <p class="slide-left">
+      Meet Workerfy; simply workers at your doorstep. <br>
+      Find civil workers at your comfort 
+      </p>
+    <a href="explore" class="slide-left"><span></span> Explore </a>
+    
+    </div>
+  
+  <div class="profile">
+    <h2>Workerfy</h2>
+    <p>Are you a worker</p>
+    <div>
+      <p> Add profile to share or view Profile</p>
+      <a href="worker_acount" class="slide-left"> <span></span> click to create your profile or view profile </a>
+      
+      </div>
+  </div>
+  
+  
+  
+  </div>
+
+{% endblock %}

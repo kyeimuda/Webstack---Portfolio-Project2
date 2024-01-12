@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}Workerfy worker account page {% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='worker_account.css') }}">
+{% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<h3 class="flash"> {{ msg }} </h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+
+<div class="loginCreate">
+  
+  <div class="login">
+    <h1>Workerfy</h1>
+    <h2>Login here</h2>
+    <form action="/worker_account" method="POST">
+      <div ="loginform">
+	
+	<input type="text" name="username" class="loginformpart" id="username" required>
+	<lable for="username">Username</lable>
+	</div>
+      
+<div ="loginform">
+  
+<input type="password" name="password" class="loginformpart" id="password" required>
+<lable for="password">Password</lable>
+</div> 
+<br>
+<div>
+  <input type="submit" name="submit" class="submit" id="submit">
+  </div>
+</form>
+    
+    </div>
+  
+  
+  <div class="create">
+    <h1>Workerfy</h1>
+    <h2>Create New profile</h2><br><br>
+    <form action="/create" method="POST" enctype="multipart/form-data">
+      <div>
+	<input type="text" name="usernamecreate" class="createformpart" id="usernameCreate" required>
+	<lable for="usernameCreate">Username:</lable>
+	</div>
+
+<div>
+  <input type="text" name="fullname" class="createformpart" id="fullname" required>
+  <lable for="fullname">fullname:</lable>
+  </div>
+
+<div>
+  <input type="password" name="passwordcreate" class="createformpart" id="passwordcreate" required>
+  <lable for="passwordcreate">Password:</lable>
+  </div>
+
+<div>
+  <h4>Profile picture</h4>
+  <input type="file" name="profilepicture" class="createformpart" id="profilepicture" required>
+  <lable id="pic">Profile picture:</lable>
+</div>
+
+<div>
+  <input type="email" name="email" class="createformpart" id="email" required>
+  <lable for="email">Email:</lable>
+  </div>
+          
+          <div>
+	    <input type="number" name="phone" class="createformpart" id="phone" required>
+	    <lable for="phone">Phone:</lable>
+	    </div>
+	  
+	  <div>
+	    <input type="number" name="otherPhone" class="createformpart" id="otherPhone" required>
+	    <lable for="otherPhone">Other phone:</lable>
+	    </div>
+	  
+	  <div>
+
+	    <label for="location ">Location:</label><br>
+    <select id="location" name="location">
+      <option value="Ashanti">Ashanti Region</option>
+      <option value="Greater Accra">Greater Accra Region</option>
+      <option value="Central">Central Region</option>
+      <option value="Volta">Volta Region</option>
+      <option value="Upper West">Upper West Region</option>
+      <option value="Upper East">Upper East Region</option>
+      <option value="Northern">Northern Region</option>
+      <option value="Western">Western Region</option>
+      <option value="Eastern">Eastern Region</option>
+      <option value="Brong Ahafo">Brong Ahafo Region</option>
+    </select>
+	    
+	    </div>
+	  
+	  <div>
+	   <label for="workField">Work Field:</label><br> 
+    <select id="workField" name="workField">
+      <option value="Mason">Mason</option>
+      <option value="Capenter">Capenter</option>
+      <option value="Tiler">Tiler</option>
+      <option value="Welder">Welder</option>
+      <option value="Electrician">Electrician</option>
+      <option value="Plumber">Plumber</option>
+      <option value="Civil labour">Civil labour</option>
+      <option value="Painter">Painter</option>
+      <option value="Gardener">Gardener</option>
+      <option value="Glazier">Glazier</option>
+    </select>
+
+	    
+	    </div>
+	  
+	  <div>
+	    <input type="text" name="description" class="createformpart" id="description" required>
+	    <lable for="description">About You:</lable>
+	  </div>
+	  
+	  <div>
+	    <label>Images:</lable><br>
+<input type="file" name="image1" class="createformpart" id="image" required><br>
+
+<input type="file" name="image2" class="createformpart" id="image" required><br>
+
+<input type="file" name="image3" class="createformpart" id="image" required><br>
+
+<input type="file" name="image4" class="createformpart" id="image" required><br>
+
+<input type="file" name="image5" class="createformpart" id="image" required><br>
+</div>
+<br>
+<input type="submit" name="createsubmit" class="submit" id="createsubmit">
+</div>
+</form>
+</div>
+
+</div>
+{% endblock %}

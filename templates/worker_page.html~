@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Workerfy worker profile page{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='worker_page.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<h3 class="flash"> {{ msg }} </h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<div class="card">
+  <div>
+    <h1> Workerfy User </h1>
+    <div class="workerinfo">
+      <div id="profileimage"><img src="image/profilepic/{{ workerInfo.username }}">
+	</div>
+      <div class="profileInfo">
+	
+	<div>
+	  <h2>id</h1>
+<p>{{ workerInfo.id }}</p>
+</div>
+<div>
+  <h2>Username</h1>
+<p>{{ workerInfo.username }}</p>
+</div>
+<div>
+  <h2>Full name</h2>
+  <p>{{ workerInfo.fullname }}</p>
+</div>
+<div>
+  <h2>Your password</h2>
+  <p>{{ workerInfo.password }}</p>
+  </div>
+<div>
+  <h2>Email</h2>
+  <p>{{ workerInfo.email }}</p>
+  </div>
+<div>
+  <h2>Phone 1</h2>
+  <p>{{ workerInfo.phone }}</p>
+  </div>
+<div>
+  <h2>Phone 2</h2>
+  <p>{{ workerInfo.phone2 }}</p>
+  </div>
+<div>
+  <h2>Location</h2>
+  <p> {{ workerInfo.Location }}</p>
+  </div>
+<div>
+  <h2> Work Field</h2>
+  <p>{{ workerInfo.work_field }}</p>
+  </div>
+<div>
+  <h2>About you</h2>
+  <p>{{ workerInfo.description }}</p>
+  </div>
+
+<a href="worker_account"> Go to login page to update </a>
+
+</div>
+
+
+</div>
+</div>
+
+<div class="workerImages">
+  <img src="image/image1/{{ workerInfo.username }}">
+  <img src="image/image2/{{ workerInfo.username }}">
+  <img src="image/image3/{{ workerInfo.username }}">
+  <img src="image/image4/{{ workerInfo.username }}">
+  <img src="image/image5/{{ workerInfo.username }}">
+
+</div>
+</div>
+<h4> This is your Account card. Always remember your Username and password, it is required to login</h4>
+{% endblock %}

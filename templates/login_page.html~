@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block title %}
+Worker login page
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='login_page.css') }}">
+{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<h3 class="flash"> {{ msg }} </h3>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+
+<div class="card">
+  <form action="/login" method="POST" enctype="multipart/form-data" id="form1">
+    
+    <div>
+      
+         
+      <h1> Workerfy User </h1>
+      <div class="workerinfo">
+	<div id="profileimage">
+
+	  <lable id="pic">Profile picture:</lable><br>
+	<image src="image/profilepic/{{ workerInfo.username }}" id="pic">  <input type="file" name="profilepicture" class="createformpart" id="profilepicture"> 
+	  
+	  </div>
+	<div class="profileInfo">
+	  <div>
+	    <lable for="usernameCreate">Username:</lable><br>
+	    <input type="text" name="usernamecreate" placeholder="{{ workerInfo.username }}" class="createformpart" id="usernameCreate">
+	    
+	    </div>
+
+<div>
+  <lable for="fullname">fullname:</lable><br>
+  <input type="text" name="fullname" placeholder="{{ workerInfo.fullname }}" class="createformpart" id="fullname">
+  
+  </div>
+
+<div>
+  <lable for="passwordcreate">Password:</lable><br>
+  <input type="password" name="passwordcreate" placeholder="{{ workerInfo.password }}" class="createformpart" id="passwordcreate">
+  
+  </div>
+
+<div>
+  <lable for="email">Email:</lable><br>
+  <input type="email" name="email" placeholder="{{ workerInfo.email }}" class="createformpart" id="email">
+  
+  </div>
+          
+          <div>
+	    <lable for="phone">Phone:</lable><br>
+	    <input type="number" name="phone" placeholder="{{ workerInfo.phone }}" class="createformpart" id="phone">
+	    
+	    </div>
+	  
+	  <div>
+	    <lable for="otherPhone">Other phone:</lable><br>
+	    <input type="number" name="otherPhone" placeholder="{{ workerInfo.phone2 }}" class="createformpart" id="otherPhone">
+	    
+	    </div>
+	  
+	  <div>
+	
+	    <label> Your Current Location: {{ workerInfo.Location }} Region</label><br>
+    <select id="location" name="location">
+      <option value="Ashanti">Ashanti Region</option>
+      <option value="Greater Accra">Greater Accra Region</option>
+      <option value="Central">Central Region</option>
+      <option value="Volta">Volta Region</option>
+      <option value="Upper West">Upper West Region</option>
+      <option value="Upper East">Upper East Region</option>
+      <option value="Northern">Northern Region</option>
+      <option value="Western">Western Region</option>
+      <option value="Eastern">Eastern Region</option>
+      <option value="Brong Ahafo">Brong Ahafo Region</option>
+    </select>
+    </div>
+	  
+	  <div>
+	    <lable for="description">About You:</lable><br>
+	    <input name="description" class="createformpart" placeholder="{{ workerInfo.description }}" id="description">
+
+	  </div>
+	  
+
+	  
+	  </div>
+	
+	</div>
+      </div>
+    
+    
+    
+    <div class="workerImages">
+      
+      <label>Images:</lable><br>
+<image src="image/image1/{{ workerInfo.username }}" id="picW"><br>
+<input type="file" name="image1" class="createformpart" id="image1"><br>
+
+<image src="image/image2/{{ workerInfo.username }}" id="picW"><br>
+<input type="file" name="image2" class="createformpart" id="image2"><br>
+
+<image src="image/image3/{{ workerInfo.username }}" id="picW"><br>
+<input type="file" name="image3" class="createformpart" id="image3"><br>
+
+<image src="image/image4/{{ workerInfo.username }}" id="picW"><br>
+<input type="file" name="image4" class="createformpart" id="image4"><br>
+
+<image src="image/image5/{{ workerInfo.username }}" id="picW"><br>
+<input type="file" name="image5" class="createformpart" id="image5"><br>
+
+<input type="submit" value="Update" name="createsubmit" class="submit\         
+" id="submit">
+
+ <a href="logout">Logout </a>
+</div>
+
+</div>
+
+</form>
+<div class="delete">
+  <form method="POST" action="/delete">
+  <input type="submit" value="Delete account" name="createsubmit" class="submit" id="submit2">
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,161 @@
+.homecontent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.intromsg {
+    margin: 20px;
+    padding: 10px;
+    color: #ffbfea;
+}
+
+.intromsg h1 {
+    font-size: 120px;
+    line-height: 140px;
+    font-weight: 600;
+}
+
+.intromsg p {
+    max-weight: 500px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ffffff;
+    opacity: 0;
+    
+}
+
+.intromsg a {
+    margin-top: 30px;
+    padding: 15px 0;
+    text-align:center;
+    width: auto;
+    border: 2px solid #ffbfea;
+    padding: 10px;
+    border-radius: 30px;
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-left {
+    animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft{
+    0%{
+	transform: translate(100px);
+	opacity: 0;
+    }
+    
+    100%{
+	transform: translate(0px);
+	opacity: 1;
+    }
+}
+
+.intromsg p.slide-left{
+    animation-delay: 1s;
+}
+
+.intromsg a.slide-left{
+    animation-delay: 2s;
+}
+
+.profile {
+    width: 100px;
+    height: 100%;
+    display: block;
+    margin: 40px;
+    padding: 10px;
+    color: #ffbfff;
+    background: rgb(0,0,0,0.5);
+}
+
+.profile div{
+    height: 50vh ;
+}
+
+.profile p{
+    color: #ffffff;
+}
+
+.poneprofile {
+    font-size: 80px;
+    line-height: 140px;
+    font-weight: 600;
+}
+
+.profile a {
+    margin-top: 30px;
+    padding: 15px 0;
+    text-align:center;
+    width: auto;
+    border: 2px solid #ffbfea;
+    padding: 10px;
+    border-radius: 30px;
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #ffbfea;
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.profile a:hover span{
+    width: 100%;
+}
+
+.profile a:hover{
+    border: none;
+}
+
+.intromsg a:hover span{
+    width: 100%;
+}
+
+.intromsg a:hover{
+    border: none;
+}
+
+@media(max-width: 700px){
+    
+    .homecontent {
+	display: block;
+    }
+
+    .actualContent{
+	display: block;
+    }
+    
+    .profile {
+	width: 80%;
+	height: 30%;
+	margin: 20px;
+    }
+    
+    .intromsg h1{
+	font-size: 70px;
+    }
+}
+

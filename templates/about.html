@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Workerfy about page {% endblock %}
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='about_content.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h2>Workerfy</h2>
+  <p>Workerfy is a project developed for a portfolio project by Bernard Kyei Mensah at the ALX/HOLBERTON SE programme. </p>
+  <p>Workerfy is a web application that seeks to breech the gap between people finding worker (civil workers) and the workers who hope to reach more customers. </p>
+  <p>
+    Workerfy helps workers (civil workers) to create a digital account on its platform, shares the account profile for others to be able to reach tge worker via the internet. 
+    </p>
+  <p>
+    Workerfy helps individuals who need civil workers but cannot find one due to various reasons such as work and time constraints and also location disadvantage e.t.c. 
+    </p>
+  <p>
+    At your comfort one can browse through the workers profile, if you like their works via images, you can contact then using information provided on their profiles. 
+    </p>
+  <br>
+  <p class="tail">Workerfy, simply workers at your doorstep. </p>
+  </div>
+{% endblock %}

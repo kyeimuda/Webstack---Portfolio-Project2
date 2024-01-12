@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'template.css') }}">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  {% block links %}
+  {% endblock %}
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <img src="{{ url_for('static', filename='images/logo1.jpg') }}" class="logo">
+      <div class="nav-links" id="navlinks">
+	<img src="{{ url_for('static', filename='images/close.png') }}" class="close" onclick="hideMenu()">
+	<ul>
+	  <li><a href="home">Home</a></li>
+	  <li><a href="explore">Explore</a></li>
+	  <li><a href="worker_account">Worker_Account</a></li>
+	  <li><a href="about">About</a></li>
+	  <li><a href="team">Team</a></li>
+	  </ul>
+	
+	</div>
+      <img src="{{ url_for('static', filename='images/menu.png') }}" class="menu" onclick="showMenu()">
+      </div>
+    
+    
+    <!-- content block  -->
+    <div class="actualContent">
+      {% block content %}
+      {% endblock %}
+      </div>
+
+
+  </div>
+  
+  
+  <!-- javascript to toggle menu-->
+  <script>
+    var navlink = document.getElementById("navlinks")
+    
+    function showMenu(){
+	navlinks.style.right = "0";
+	navlinks.style.display = "block";
+    } 
+    
+    function hideMenu(){
+	navlinks.style.right = "-200px";
+	navlinks.style.display = "none";
+    } 
+    
+    </script>
+</body>
+</html>

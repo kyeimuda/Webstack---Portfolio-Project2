@@ -1,0 +1,27 @@
+{% extends "base.html" %}                                        
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='about_content.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='team.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h2>Workerfy</h2>
+  <p>My name is Bernard Kyei Mensah, a student at the ALX/HOLBERTON SE PROGRAM. I am 26 years of age, a Ghanaian and a graduate from the University of Professional Studies, Accra(UPSA) where i bagged my first degree as a bachelor of science in business administration. I joined the ALX/HOLBERTON SE PROGRAM because of my love for technology. </p>
+  <p>
+    Workerfy is my portfolio project I developed to test my knowledge on what I have achieved from the ALX/HOLBERTON SE PROGRAM. </p>
+  <p>
+    Workerfy is a web application that minimisesthe hustle of finding workers he people need workers to do some job for them and also worker expanding their opportunities. The aim of Workerfy is find civil workers with ease. </p>
+  <p>
+    This is not going to be the end of Workerfy, wait till Workerfy tops the worlds worker finding applications. </p>
+  <br>
+  <p class="teamtail">Workerfy, simply workers at your doorstep. 
+    <br>
+    love from Bernard. <br>
+    
+    <img src="{{ url_for('static', filename='images/linkedin-icon-logo-png-transparent.png') }}" class ="linkedin">
+    <img src="{{ url_for('static', filename='images/Facebook_Logo(2019).png') }}" class="facebook">
+    <img src="{{ url_for('static', filename='images/Twitter_Logo.png') }}" class="twitter">
+    </p>
+  </div>
+{% endblock %}

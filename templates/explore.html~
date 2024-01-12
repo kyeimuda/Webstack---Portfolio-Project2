@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block title %}Workerfy Explore page{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='explore.css') }}">
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="holder">
+  
+  <div class="findbyfields">
+    <div class="findtitle">
+      <h3> Find by Fields: </h3><br>
+      </div>
+    
+    <div class="fields">
+      <div>
+	<button type="button" class="field" id="masonbtn" value="Mason">Mason</button><br>
+      </div>
+      
+      <div>
+	<button type="button" class="field" id="carpenterbtn" value="Carpenter">Carpenter</button><br></div>
+      
+      
+      <div>
+	<button type="button" class="field" id="electricianbtn" value="Electrician">Electrician</button><br></div>
+      
+      
+      <div>
+	<button type="button" class="field" id="welderbtn" value="Welder">Welder</button><br></div>
+      
+      
+      
+      <div><button type="button" class="field" id="tilerbtn" value="Tiler">Tiler</button><br></div>
+      
+      
+      
+      <div><button type="button" class="field" id="plumberbtn" value="Plumber">Plumber</button><br></div>
+      
+      <div><button type="button" class="field" id="civilbtn" value="Civil labour">Civil labour</button><br> </div>
+      
+      <div><button type="button" class="field" id="painterbtn" value="Painter">Painter</button><br></div>
+      
+      <div><button type="button" class="field" id="gardenerbtn" value="Gardener">Gardener</button><br>
+      </div>
+      
+      <div>
+	<button type="button" class="field" id="glazierbtn" value="Glazier">Glazier</button><br>
+      </div>
+      </div>
+    </div>
+  
+  <div class="filterandresults">
+    
+    <div class="filter">
+      <div class="title">
+	<h3>Filter</h3>
+	</div>
+      <div class="locationandfilter">
+	<div class="filterlocation">
+	  
+	  <label for="location ">Location:</label><br>
+    <select id="location" name="location">
+      <option value="All">All</option>
+      <option value="Ashanti">Ashanti Region</option>
+      <option value="Greater Accra">Greater Accra Region</option>
+      <option value="Central">Central Region</option>
+      <option value="Volta">Volta Region</option>
+      <option value="Upper West">Upper West Region</option>
+      <option value="Upper East">Upper East Region</option>
+      <option value="Northern">Northern Region</option>
+      <option value="Western">Western Region</option>
+      <option value="Eastern">Eastern Region</option>
+      <option value="Brong Ahafo">Brong Ahafo Region</option>
+    </select>
+    
+    </div>
+	
+	<div class="filterfields">
+	  
+	  <label for="fields ">Fields:</label><br>
+    <select id="fields" name="fields">
+      <option value="All">All</option>
+      <option value="Mason">Mason</option>
+      <option value="Carpenter">Capenter</option>
+      <option value="Tiler">Tiler</option>
+      <option value="Welder">Welder</option>
+      <option value="Electrician">Electrician</option>
+      <option value="Plumber">Plumber</option>
+      <option value="Civil labour">Civil Labour</option>
+      <option value="Painter">Painter</option>
+      <option value="Gardener">Gardener</option>
+      <option value="Glazier">Glazier</option>
+    </select>
+    
+    </div>
+	
+	<div class="filterbtn">
+	  <button type="button" class="searchbtn" id="searchBTN" value="gardener">Search</button>
+	  </div>
+	
+	
+	
+	
+	</div>
+      
+      
+      </div>
+    
+    
+    <div class="results" id="ResultS">
+      <div class="resultlisttab">
+	<h4 id="resulttitle"> Results: </h4>
+      </div>
+
+      
+{% for worker in Allworkers %}      
+      <div class="workertab" id="WorkerTab">
+	
+	<div class="resultsinfo">
+	  
+	  <div class="pic">
+	    <div id="profileimg">
+	      <img src="image/profilepic/{{ worker.username }}">
+	      </div>
+	    </div>
+	  
+	  
+	  <div class="about">
+	    <h3>Workerfy</h3>
+	    <p id="username">Name: <br>{{ worker.username }}</p>
+	    <p id="workfield">Workfield :<br> {{ worker.work_field }}</p>
+	    <p id="location">Location:<br> {{ worker.Location }}</p>
+	    <p id="email">Email:<br>0 {{ worker.email }} </p>
+	    <p id="phone">phone:<br> {{ worker.phone }}</p>
+	    
+	    <p id="phone2">Phone2:<br> {{ worker.phone2 }}</p>
+	    <p id="description">About:<br> {{ worker.description }}</p>
+	
+	    
+	    </div>
+	  </div>
+	<div class="resultspics">
+	  <div class="smallimg">
+	    
+	    <img src="/image/image1/{{ worker.username }}" class="smallImgs" data-imageId="fullone{{ worker.id }}"> 
+	    
+	    <img src="/image/image2/{{ worker.username }}" class="smallImgs" data-imageId="fullone{{ worker.id }}">
+	    
+	    <img src="/image/image3/{{ worker.username }}" class="smallImgs" data-imageId="fullone{{ worker.id }}">
+	    
+	    <img src="/image/image4/{{ worker.username }}" class="smallImgs" data-imageId="fullone{{ worker.id }}">
+	    
+	    <img src="/image/image5/{{ worker.username }}" class="smallImgs" data-imageId="fullone{{ worker.id }}">
+	    </div>
+	  
+	  <div class="fullimg">
+	    <img src="/image/image1/{{ worker.username }}" id="fullone{{ worker.id }}">
+	    
+	    
+	    </div>
+	  
+	</div>
+	
+	</div>
+      {% endfor %}
+    </div>
+    
+    </div>
+  
+  
+  </div>
+
+{% endblock %}
